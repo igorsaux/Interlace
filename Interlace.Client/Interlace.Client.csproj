@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <RootNamespace>Interlace.Client</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Interlace.Shared\Interlace.Shared.csproj"/>
+        <ProjectReference Include="..\Interlace.Vendor.SDL2\Interlace.Vendor.SDL2.csproj"/>
+        <ProjectReference Include="..\Interlace.Vendor.WGPU\Interlace.Vendor.WGPU.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Link="%(Filename)%(Extension)" Include="$(SolutionDir)\Templates\client_config.toml" CopyToOutputDirectory="PreserveNewest"/>
+    </ItemGroup>
+</Project>

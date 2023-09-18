@@ -1,0 +1,24 @@
+[graphics]
+vsync = true
+
+# 0 - Detect best option
+# 3 - D3D12 (Windows)
+# 4 - Metal (MacOS)
+# 5 - Vulkan (Windows & Linux)
+backend = 0
+
+# 0 - Windowed
+# 1 - Fullscreen
+window_mode = 0
+
+[game]
+ticks = 30
+
+[logging]
+# 0 - Trace
+# 1 - Debug
+# 2 - Info
+# 3 - Warning
+# 4 - Error
+# 5 - Fatal
+level = 1

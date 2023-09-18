@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Vendor.SDL2</RootNamespace>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Link="%(Filename)%(Extension)" Include="lib\*" CopyToOutputDirectory="PreserveNewest"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JetBrains.Annotations" Version="2023.2.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Interlace.Shared\Interlace.Shared.csproj"/>
+    </ItemGroup>
+</Project>

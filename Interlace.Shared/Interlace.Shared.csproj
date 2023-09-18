@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <RootNamespace>Interlace.Shared</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JetBrains.Annotations" Version="2023.2.0"/>
+        <PackageReference Include="Silk.NET.Maths" Version="2.17.1"/>
+        <PackageReference Include="Tomlyn" Version="0.16.2"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <ProjectReference OutputItemType="Analyzer" ReferenceOutputAssembly="false" Include="..\Interlace.SourceGenerators\Interlace.SourceGenerators.csproj"/>
+        <ProjectReference Include="..\Interlace.Vendor.Arch\src\Arch\Arch.csproj"/>
+        <ProjectReference Include="..\Interlace.Vendor.Sodium\Interlace.Vendor.Sodium.csproj" />
+        
+
+
+        <Content Link="%(Filename)%(Extension)" Include="$(SolutionDir)\Templates\interlace.cfg" CopyToOutputDirectory="PreserveNewest"/>
+
+
+
+
+
+
+
+
+    </ItemGroup>
+
+
+
+
+
+
+
+</Project>

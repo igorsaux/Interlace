@@ -1,0 +1,17 @@
+Copyright 2023 Igor Spichkin
+
+By purchasing, downloading, accessing, or using the software, you are agreeing to be bound by the terms of this agreement:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Except as expressly set out in this Licence or as permitted by any local law, you undertake:
+	3.1. not to rent, lease, sub-license or loan the software;
+	3.2. not to disassemble, decompile, reverse-engineer or create derivative works based on the whole or any part of the software nor attempt to do any such thing except to the extent that (by virtue of section 296A of the Copyright, Designs and Patents Act 1988) such actions cannot be prohibited because they are essential for the purpose of achieving inter-operability of the software with another software program, and provided that the information obtained by you during such activities: 
+		3.2.1. is used only for the purpose of achieving inter-operability of the Software with another software programs; and
+		3.2.2. is not used to create any software which is substantially similar to the software;
+
+4. If you distribute or otherwise make available your modifications or derivate works of the source code or/and art assets (hereinafter "New Work") , you automatically grant to Igor Spichkin the irrevocable, perpetual, royalty free, sublicensable right and license under all applicable copyrights and intellectual property rights laws to use, reproduce, modify, adapt, perform, display, distribute and otherwise exploit and/or dispose of the New Work (or any part of the New Work) in any way Igor Spichkin, or its respective designee(s), sees fit.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

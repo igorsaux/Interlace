@@ -1,0 +1,3 @@
+[submodule "Arch"]
+	path = Interlace.Vendor.Arch
+	url = https://github.com/Interlace-Dev/Arch
