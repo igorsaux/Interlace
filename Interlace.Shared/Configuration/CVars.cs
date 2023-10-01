@@ -27,9 +27,4 @@ public static class CVars
 
     public static readonly CVarDeclaration LoggingLevel =
         CVarDeclaration.Create("logging.level", LogLevel.Trace, CVarFlag.Archive);
-    
-    // NETWORK
-
-    public static readonly CVarDeclaration NetworkPort =
-        CVarDeclaration.Create("net.port", 1212, CVarFlag.Archive | CVarFlag.ServerOnly);
 }
