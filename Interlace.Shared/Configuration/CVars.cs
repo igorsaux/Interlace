@@ -18,11 +18,18 @@ public static class CVars
     public static readonly CVarDeclaration GraphicsWindowMode =
         CVarDeclaration.Create("graphics.window_mode", WindowMode.Windowed, CVarFlag.Archive | CVarFlag.ClientOnly);
 
+   
     // GAME
 
     public static readonly CVarDeclaration GameTicks =
         CVarDeclaration.Create("game.ticks", 30, CVarFlag.Repliacted | CVarFlag.Archive);
 
+    public static readonly CVarDeclaration GameLanguage =
+        CVarDeclaration.Create("game.language", "en-US", CVarFlag.Repliacted | CVarFlag.Archive);
+
+    public static readonly CVarDeclaration GameFallbackLanguage =
+        CVarDeclaration.Create("game.fallback_language", "en-US", CVarFlag.Repliacted | CVarFlag.Archive);
+    
     // LOGGING
 
     public static readonly CVarDeclaration LoggingLevel =

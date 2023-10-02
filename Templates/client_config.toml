@@ -13,6 +13,7 @@ window_mode = 0
 
 [game]
 ticks = 30
+language = "en-US"
 
 [logging]
 # 0 - Trace

@@ -69,9 +69,9 @@ public abstract class SharedConfigurationManager : IConfigurationManager, IIniti
         return true;
     }
 
-    public T? GetValue<T>(CVarDeclaration decl)
+    public T GetValue<T>(CVarDeclaration decl)
     {
-        return (T?)_declarations[decl.Path].Value;
+        return (T)_declarations[decl.Path].Value!;
     }
 
     public void SubscribeOnValueChanged<T>(CVarDeclaration decl,
@@ -143,9 +143,7 @@ public abstract class SharedConfigurationManager : IConfigurationManager, IIniti
             return;
         }
 
-        
         var fileContent = File.ReadAllText(path);
-        _serialization.TryDeserializeFromToml(fileContent, out var result);
         var document = Toml.Parse(fileContent, path);
 
         LoadFromTable(document.ToModel(), null, new Stack<string>());

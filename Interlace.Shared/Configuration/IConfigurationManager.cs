@@ -18,7 +18,7 @@ public interface IConfigurationManager : IManager
 
     bool TryGetValue(string path, out object? value);
 
-    T? GetValue<T>(CVarDeclaration decl);
+    T GetValue<T>(CVarDeclaration decl);
 
     void SubscribeOnValueChanged<T>(CVarDeclaration decl, ValueChangedDelegate<T?> callback,
         bool callImmediately = true);
