@@ -11,11 +11,22 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Interlace.Shared\Interlace.Shared.csproj"/>
+        <ProjectReference Include="..\Interlace.Vendor.FMOD\Interlace.Vendor.FMOD.csproj" />
         <ProjectReference Include="..\Interlace.Vendor.SDL2\Interlace.Vendor.SDL2.csproj"/>
+        <ProjectReference Include="..\Interlace.Vendor.SteamAudio\Interlace.Vendor.SteamAudio.csproj" />
         <ProjectReference Include="..\Interlace.Vendor.WGPU\Interlace.Vendor.WGPU.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
         <Content Link="%(Filename)%(Extension)" Include="$(SolutionDir)\Templates\client_config.toml" CopyToOutputDirectory="PreserveNewest"/>
     </ItemGroup>
+
+    <ItemGroup>
+        <UpToDateCheckInput Include="..\FMOD\**\*" />
+    </ItemGroup>
+
+    <Target Name="BuildFmod" BeforeTargets="BeforeCompile">
+        <Error Condition="$(FMOD_STUDIO_CLI) == ''" Text="FMOD not found, specify path to 'fmodstudiocl' executable in FMOD_STUDIO_CLI environment variable" />
+        <Exec ConsoleToMSBuild="true" WorkingDirectory="..\" Command="&quot;$(FMOD_STUDIO_CLI)&quot; -build FMOD/FMOD.fspro" />
+    </Target>
 </Project>

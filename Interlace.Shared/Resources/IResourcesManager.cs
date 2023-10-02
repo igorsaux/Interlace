@@ -10,9 +10,10 @@ public interface IResourcesManager : IManager
 
     string ReadTextResource(ResourcePath resourcePath);
 
-    Stream OpenStream(ResourcePath resourcePath);
-
     ResourcePath[] GetDirectories(ResourcePath resourcePath);
 
     ResourcePath[] GetFiles(ResourcePath resourcePath);
+
+    // TODO: remove the hack in future
+    string ResourcePathToNative(ResourcePath resourcePath);
 }

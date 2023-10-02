@@ -37,13 +37,6 @@ public sealed class DynamicResourcesManager : IResourcesManager, IInitializeHook
         return File.ReadAllText(path, Encoding.UTF8);
     }
 
-    public Stream OpenStream(ResourcePath resourcePath)
-    {
-        var path = TransformPath(resourcePath.Path);
-
-        return File.OpenRead(path);
-    }
-
     public ResourcePath[] GetDirectories(ResourcePath resourcePath)
     {
         var path = TransformPath(resourcePath.Path);
@@ -69,6 +62,11 @@ public sealed class DynamicResourcesManager : IResourcesManager, IInitializeHook
                 new ResourcePath($"{Path.DirectorySeparatorChar}{Path.GetRelativePath(_resourcesFolder, files[i])}");
 
         return transformedPaths;
+    }
+
+    public string ResourcePathToNative(ResourcePath resourcePath)
+    {
+        return Path.GetFullPath(resourcePath.Path.TrimStart('/').TrimStart(Path.DirectorySeparatorChar), _resourcesFolder);
     }
 
     private string TransformPath(string path)

@@ -1,3 +1,8 @@
 obj/
 bin/
 .idea/
+
+# FMOD
+FMOD/.cache/
+FMOD/.unsaved/
+Resources/Audio/*

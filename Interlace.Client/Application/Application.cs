@@ -1,7 +1,10 @@
-﻿using Interlace.Client.Configuration;
+﻿using Interlace.Client.Audio;
+using Interlace.Client.Audio.FMod;
+using Interlace.Client.Configuration;
 using Interlace.Client.Ecs;
 using Interlace.Client.Graphics;
 using Interlace.Client.Logging;
+using Interlace.Client.SteamAudio;
 using Interlace.Client.Windowing;
 using Interlace.Client.Windowing.SDL2;
 using Interlace.Shared.Application;
@@ -26,6 +29,7 @@ public sealed class Application : SharedApplication, IPostInitializeHook
 {
     [Dependency] private readonly IGraphicsManager _graphics = default!;
     [Dependency] private readonly IWindowingManager _windowing = default!;
+    [Dependency] private readonly IAudioManager _audio = default!;
 
     public Application()
     {
@@ -41,6 +45,8 @@ public sealed class Application : SharedApplication, IPostInitializeHook
         AddManager<ITimingManager, TimingManager>();
         AddManager<IWindowingManager, Sdl2WindowingManager>();
         AddManager<IGraphicsManager, GraphicsManager>();
+        AddManager<IAudioManager, FmodAudioManager>();
+        AddManager<ISteamAudioManager, SteamAudioManager>();
         AddManager<IEntityManager, EntityManager>();
         AddManager<IShellManager, ShellManager>();
     }
@@ -52,6 +58,7 @@ public sealed class Application : SharedApplication, IPostInitializeHook
 
     protected override void TickUpdate(TimeSpan deltaTime)
     {
+        _audio.TickUpdate();
     }
 
     protected override void FrameUpdate(TimeSpan deltaTime)
