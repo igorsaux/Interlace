@@ -11,6 +11,10 @@
 
 Нативные зависимости и собственные версии сторонних проектов имеют префикс `Interlace.Vendor`.
 
+### Требования
+
+Для компиляции требуется установить [FMOD Engine и FMOD Studio](https://www.fmod.com/download) и указать путь до `fmodstudiocl` через переменную середы `FMOD_STUDIO_CLI`.
+
 ## Сообщество
 
 В данный момент для общения используется [сервер](https://discord.gg/5BRMMFg) Discord.
